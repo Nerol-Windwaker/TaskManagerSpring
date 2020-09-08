@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <style>
+
+      </style>
+</head>
+<body>
+<div>
+    <p>Name: {{taskName}}</p>
+    <p>---Description---</p>
+    <p>{{taskDescription}}</p>
+    <p>---End Description---</p>
+    <p>Status: {{taskStatus}}</p>
+    <p>Date: {{taskDate}}</p>
+</div>
+<form method="post" >
+    <p><input type="text" name="newTaskName" placeholder="Новое имя задачи"></p>
+    <p><textarea rows ="10" cols="45" name="newTaskDescription" placeholder="Новое описание задачи" ></textarea></p>
+    <p>
+       <input type="radio" name="newTaskStatus" value="NotReady"> Не готово <br>
+       <input type="radio" name="newTaskStatus" value="NowInWork"> В работе <br>
+       <input type="radio" name="newTaskStatus" value="Ready"> Готово <br>
+       <input type="radio" name="newTaskStatus" value="None" checked> Не менять <br>
+    </p>
+    <p><input type="date" name="newTaskDate" placeholder="Новая дата"/></p>
+    <button type= "submit">Изменить</button>
+</form>
+<a href="/tasks">Вернуться</a>
+</body>
+</html>

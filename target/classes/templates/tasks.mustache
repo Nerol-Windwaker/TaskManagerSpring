@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <style>
+
+      </style>
+</head>
+<body>
+<div>
+    {{#tasks}}
+        <p>
+        {{id}} )
+        <a href = "tasks/task?id={{id}}">
+        {{showName}}
+        {{showStatus}}
+        {{showDate}}
+        </a>
+        </p>
+    {{/tasks}}
+</div>
+<form method="post" action="deleteTask">
+<p><input type="text" name="deleteNumber" placeholder="Удалить задачу номер.."></p>
+<button type= "submit">Удалить</button>
+
+</form>
+<p>Создать задачу</p>
+<form method="post" action="newTask">
+<p><input type="text" name="taskName" placeholder="Имя задачи"></p>
+<p><textarea rows ="10" cols="45" name="taskDescription" placeholder="Описание задачи" ></textarea></p>
+<button type= "submit">Создать</button>
+
+</form>
+
+
+</body>
+</html>
