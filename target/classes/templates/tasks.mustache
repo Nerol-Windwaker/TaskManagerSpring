@@ -10,16 +10,16 @@
 <div>
     {{#tasks}}
         <p>
-        {{id}} )
-        <a href = "tasks/task?id={{id}}">
-        {{showName}}
-        {{showStatus}}
-        {{showDate}}
+        {{getId}})
+        <a href = "/task-manager/tasks/{{getId}}">
+        {{getTaskName}}
+        {{getStatus}}
+        {{getDate}}
         </a>
         </p>
     {{/tasks}}
 </div>
-<form method="post" action="deleteTask">
+<form method="post" action="DELETE">
 <p><input type="text" name="deleteNumber" placeholder="Удалить задачу номер.."></p>
 <button type= "submit">Удалить</button>
 
